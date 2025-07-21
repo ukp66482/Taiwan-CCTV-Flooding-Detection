@@ -6,7 +6,7 @@ from multiprocessing import Process
 def run_capture(json_file):
     try:
         print(f"啟動子進程: {json_file}")
-        subprocess.run(["python", "capture_all.py", "--json", json_file])
+        subprocess.run(["python", "capture.py", "--json", json_file])
     except Exception as e:
         print(f"執行 {json_file} 發生錯誤: {e}")
 
