@@ -22,13 +22,13 @@ def extract_camera_id(url):
 
 def load_cameras_from_json(json_path):
     if not os.path.exists(json_path):
-        print(f"❌ 找不到指定的 JSON 檔案：{json_path}")
+        print(f"找不到指定的 JSON 檔案：{json_path}")
         return []
     try:
         with open(json_path, encoding="utf-8") as f:
             raw = json.load(f)
     except Exception as e:
-        print(f"❌ 讀取 JSON 發生錯誤: {e}")
+        print(f"讀取 JSON 發生錯誤: {e}")
         return []
     flat = {}
     for city, cams in raw.items():
@@ -126,7 +126,7 @@ def main():
     os.makedirs(IMAGE_DIR, exist_ok=True)
     camera_list = load_cameras_from_json(args.json)
     if not camera_list:
-        print("❌ 沒有找到任何攝影機")
+        print("沒有找到任何攝影機")
         return
 
     selected_cameras = camera_list
