@@ -1,6 +1,3 @@
-"""
-capture_all_no_log.py  ※ 已移除 emoji 與 logging，保留基本功能與 CLI 輸出
-"""
 import os, time, json, re, requests, urllib3, argparse
 from datetime import datetime
 from selenium import webdriver
