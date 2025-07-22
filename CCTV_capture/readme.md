@@ -5,7 +5,7 @@
 ## 1.擷取單一縣市攝影機圖片
 
 ```shell
-python capture.py --json cameras_by_city/台南市_cameras.json
+python capture.py --json 台南市_cameras.json
 ```
 
 ## 2.多城市同時擷取（Multiprocess）
