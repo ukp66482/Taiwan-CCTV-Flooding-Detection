@@ -8,13 +8,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
-IMAGE_DIR = "downloaded_images"
-DELAY_BETWEEN_CAMERAS = 1
-DELAY_BETWEEN_ROUNDS = 5
+IMAGE_DIR = "D:\Taiwan_CCTV\downloaded_images"
+DELAY_BETWEEN_CAMERAS = 0.1
+DELAY_BETWEEN_ROUNDS = 300
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def extract_camera_id(url):
-    m = re.search(r"(tnn|khh)-(\d+)", url)
+    m = re.search(r"(tnn|khh|tpe|ttt|nwt|tao)-(\d+)", url)
     return f"{m.group(1)}_{m.group(2)}" if m else "unknown"
 
 def load_cameras_from_json(json_path):
